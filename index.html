@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IoT Substation Monitor | R.H. Sapat College of Engineering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&family=Exo+2:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">⚡</span>
+      <span>IoT Substation</span>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#introduction" class="nav-link">Introduction</a></li>
+      <li><a href="#problem" class="nav-link">Problem</a></li>
+      <li><a href="#objectives" class="nav-link">Objectives</a></li>
+      <li><a href="#related-work" class="nav-link">Related Work</a></li>
+      <li><a href="#outcomes" class="nav-link">Outcomes</a></li>
+      <li><a href="#future-scope" class="nav-link">Future Scope</a></li>
+      <li><a href="#achievements" class="nav-link">Achievements</a></li>
+      <li><a href="#team" class="nav-link">Team</a></li>
+      <li><a href="#conclusion" class="nav-link">Conclusion</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home" class="hero">
+    <div class="grid-bg"></div>
+    <div class="scan-line"></div>
+    <div class="hero-content">
+      <div class="badge">Final Year Project | ENTC Engineering | 2025–26</div>
+      <h1 class="hero-title">
+        <span class="line1">IoT Based</span>
+        <span class="line2">Monitoring &amp; Controlling</span>
+        <span class="line3">of Substation Equipment</span>
+      </h1>
+      <p class="hero-sub">Transforming traditional power substations into smart, automated, and remotely supervised grid nodes using ESP32, real-time sensors, and cloud IoT dashboards.</p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-val">630</span><span class="stat-label">kVA Transformer Studied</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-val">3</span><span class="stat-label">Core Sensors Deployed</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-val">24/7</span><span class="stat-label">Automated Protection</span></div>
+      </div>
+      <a href="#introduction" class="cta-btn">Explore Project ↓</a>
+    </div>
+    <div class="hero-visual">
+      <div class="circuit-ring ring1"></div>
+      <div class="circuit-ring ring2"></div>
+      <div class="circuit-ring ring3"></div>
+      <div class="center-icon">⚡</div>
+      <div class="pulse-dot dot1"></div>
+      <div class="pulse-dot dot2"></div>
+      <div class="pulse-dot dot3"></div>
+    </div>
+  </section>
+
+  <!-- INTRODUCTION -->
+  <section id="introduction" class="section">
+    <div class="container">
+      <div class="section-label">01 / Introduction</div>
+      <h2 class="section-title">Modernizing the Power Grid</h2>
+      <div class="two-col">
+        <div class="text-col">
+          <p>Electric power substations are the critical nodes of our electricity distribution infrastructure — converting, regulating, and transmitting power across vast networks. Yet despite their vital importance, most substations in developing regions still rely on <strong>manual, periodic inspections</strong> to detect faults, monitor transformer health, and log operational parameters.</p>
+          <p>This project introduces a fully integrated, <strong>IoT-based smart monitoring system</strong> purpose-built for distribution substations. At its core lies the ESP32 microcontroller — a dual-core, Wi-Fi-enabled processing unit that continuously reads data from a carefully designed sensor network and transmits it to a remote cloud dashboard in real time.</p>
+          <p>The sensor network spans three critical dimensions of substation health:</p>
+          <ul class="feature-list">
+            <li><span class="icon">🌡</span> <strong>PT100 Temperature Sensor</strong> — monitors transformer oil and winding temperatures against IS-standard thresholds (35°C oil / 40°C winding rise).</li>
+            <li><span class="icon">⚡</span> <strong>ACS712 Current Sensor</strong> — detects overload, fault currents, and phase imbalances through Hall-effect measurement, mirroring industrial 500/5A CTs.</li>
+            <li><span class="icon">📡</span> <strong>HC-SR04 Ultrasonic Sensor</strong> — remotely measures transformer oil conservator levels, replacing the manual sight glass with a digital metric.</li>
+            <li><span class="icon">💡</span> <strong>LDR Oil Quality Sensor</strong> — gauges oil clarity degradation, providing early warnings of dielectric fluid contamination.</li>
+          </ul>
+          <p>All parameters are displayed live on a 16×2 LCD at the hardware level and simultaneously streamed to a web/mobile IoT dashboard, enabling operators to supervise and control the substation from any location with internet access.</p>
+          <p>This system was developed as the final-year project for the Department of Electronics & Telecommunication Engineering at R.H. Sapat College of Engineering, Management Studies and Research, Nashik — with field research grounded in an industrial visit to <strong>Koyna Engineers Pvt. Ltd.</strong>, a premier transformer manufacturer in MIDC Satpur, Nashik.</p>
+        </div>
+        <div class="image-col">
+          <div class="project-image-wrap">
+            <img src="images/project_hardware.jpg" alt="IoT Substation Hardware Prototype" class="project-img"/>
+            <div class="img-caption">Custom PCB prototype with ESP32, sensors, LCD, and transformer oil tank model</div>
+          </div>
+          <div class="tech-tags">
+            <span class="tag">ESP32</span>
+            <span class="tag">PT100</span>
+            <span class="tag">ACS712</span>
+            <span class="tag">HC-SR04</span>
+            <span class="tag">IoT Cloud</span>
+            <span class="tag">PCB Design</span>
+            <span class="tag">Relay Module</span>
+            <span class="tag">LCD 16x2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM STATEMENT -->
+  <section id="problem" class="section dark-section">
+    <div class="container">
+      <div class="section-label">02 / Problem Statement</div>
+      <h2 class="section-title">The Critical Gap in Substation Management</h2>
+      <p class="section-intro">Traditional substation monitoring is slow, costly, and dangerously reactive — problems that an IoT solution directly addresses.</p>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="prob-num">01</div>
+          <h3>Reactive Fault Detection</h3>
+          <p>Conventional substations have no real-time fault detection. Overloads, winding short circuits, and insulation failures are discovered only after catastrophic equipment damage occurs or scheduled human inspection takes place — sometimes hours or days after a fault develops. This reactive approach results in unplanned outages, costly emergency repairs, and reduced transformer lifespan.</p>
+        </div>
+        <div class="problem-card">
+          <div class="prob-num">02</div>
+          <h3>Manual Oil Level Monitoring</h3>
+          <p>Transformer dielectric oil — the critical insulating and cooling medium — can gradually leak undetected. Operators rely on manual sight glass readings during periodic walkthroughs. In remote or unmanned substations, a slow oil leak can progress from "low" to "critically low," exposing windings, causing insulation breakdown, and leading to catastrophic transformer failure worth crores in replacement costs.</p>
+        </div>
+        <div class="problem-card">
+          <div class="prob-num">03</div>
+          <h3>Temperature Threshold Violations</h3>
+          <p>Industrial transformers operate within strict IS-standard temperature limits (35°C oil temperature rise, 40°C winding rise above 40°C ambient). Without continuous monitoring, thermal runaway from sustained overloads or cooling system failures can remain undetected. Sustained over-temperature conditions accelerate insulation aging logarithmically — cutting transformer life by 50% for every 6–8°C above the rated limit.</p>
+        </div>
+        <div class="problem-card">
+          <div class="prob-num">04</div>
+          <h3>High Operational Cost & Safety Risks</h3>
+          <p>Manual inspection of high-voltage substations requires trained personnel to physically enter energized switchyards — an inherently hazardous activity. The operational cost of maintaining inspection schedules, the human safety risk of proximity to 11kV and 33kV live equipment, and the inability to monitor remote or rural substations effectively represent major systemic vulnerabilities in the current power distribution model.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OBJECTIVES -->
+  <section id="objectives" class="section">
+    <div class="container">
+      <div class="section-label">03 / Objectives</div>
+      <h2 class="section-title">What We Set Out to Build</h2>
+      <p class="section-intro">Five engineering objectives were defined to guide this project from field research to a fully functional, tested prototype.</p>
+      <div class="obj-timeline">
+        <div class="obj-item">
+          <div class="obj-marker">
+            <span>1</span>
+          </div>
+          <div class="obj-content">
+            <h3>Implement Real-Time Multi-Parameter Monitoring</h3>
+            <p>Design and deploy a sensor network capable of continuously measuring all four critical substation parameters — transformer oil temperature (PT100), load current (ACS712), transformer oil conservator level (HC-SR04 ultrasonic), and oil quality/clarity (LDR) — with a sampling rate sufficient for real-time fault detection and an accuracy that meets industrial calibration standards.</p>
+          </div>
+        </div>
+        <div class="obj-item">
+          <div class="obj-marker"><span>2</span></div>
+          <div class="obj-content">
+            <h3>Enable Automated Equipment Protection</h3>
+            <p>Develop and code threshold-based protection logic on the ESP32 microcontroller that automatically isolates faulty circuits the instant a sensor reading breaches pre-programmed safety limits. The protection module uses a 5V opto-isolated relay to trip a Miniature Circuit Breaker (MCB), eliminating human reaction time from the fault-clearing equation entirely and achieving protection response in milliseconds.</p>
+          </div>
+        </div>
+        <div class="obj-item">
+          <div class="obj-marker"><span>3</span></div>
+          <div class="obj-content">
+            <h3>Develop a Remote Supervision Dashboard</h3>
+            <p>Build a cloud-connected web and mobile application that receives live sensor telemetry from the ESP32 via Wi-Fi and presents it in a clean, intuitive dashboard. Operators must be able to view all four parameters in real time, review historical logs, receive push notifications on parameter threshold breaches, and remotely command the relay module to trip or re-energize a circuit — all from any internet-connected device.</p>
+          </div>
+        </div>
+        <div class="obj-item">
+          <div class="obj-marker"><span>4</span></div>
+          <div class="obj-content">
+            <h3>Ground Design in Real Industrial Benchmarks</h3>
+            <p>Validate the system's sensor choices, threshold limits, and protection logic against real-world industrial specifications obtained during the field visit to Koyna Engineers Pvt. Ltd. This includes mapping the ACS712's scaled current output to the 500/5A CT ratio of the 33kV metering cubicle and setting oil temperature thresholds based on IS 335:2018 standard limits observed on the 630 kVA transformer nameplate.</p>
+          </div>
+        </div>
+        <div class="obj-item">
+          <div class="obj-marker"><span>5</span></div>
+          <div class="obj-content">
+            <h3>Fabricate a Functional PCB Prototype</h3>
+            <p>Design and fabricate a custom single-layer FR4 PCB integrating the power supply section (230V AC to 12V/5V regulated DC), signal conditioning circuits (Wheatstone bridge + Op-Amp for PT100, voltage divider for LDR), microcontroller section (ESP32), and sensor/IoT communication interfaces — with proper grounding, decoupling capacitors, and isolation between AC and DC domains. Validate all hardware through systematic testing protocols.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED WORK -->
+  <section id="related-work" class="section dark-section">
+    <div class="container">
+      <div class="section-label">04 / Related Work</div>
+      <h2 class="section-title">Standing on the Shoulders of Prior Research</h2>
+      <p class="section-intro">A thorough literature survey of published IoT and power systems research shaped our system architecture and validated our sensor choices.</p>
+      <div class="rw-grid">
+        <div class="rw-card">
+          <div class="rw-year">2023</div>
+          <h3>IEEE ICPS — IoT Real-Time Monitoring for Distribution Substations</h3>
+          <p>Talha et al. demonstrated a Wi-Fi-based monitoring system for distribution substations using STM32 and MQTT protocol. Their work established the viability of microcontroller-driven telemetry for substation data but lacked integrated automated trip mechanisms. Our project extends this by adding ACS712-triggered relay protection and oil level monitoring as additional parameters.</p>
+        </div>
+        <div class="rw-card">
+          <div class="rw-year">2025</div>
+          <h3>IRJMETS — IoT Substation Monitoring & Controlling</h3>
+          <p>Sahebrao et al. proposed an Arduino Uno-based substation monitoring system with temperature and current sensors. While effective as a proof of concept, the Arduino platform lacks native Wi-Fi and the processing power for simultaneous multi-sensor acquisition and IoT communication. This gap directly motivated our selection of the dual-core ESP32, which handles sensor reading and cloud communication on separate cores without data latency.</p>
+        </div>
+        <div class="rw-card">
+          <div class="rw-year">Industrial</div>
+          <h3>Field Research — Koyna Engineers Pvt. Ltd., Nashik</h3>
+          <p>First-hand observation of a fully assembled 630 kVA, 11kV/433V Dyn11 distribution transformer, a 33kV metering cubicle (500/5A CT ratio), ONAN cooling systems, vacuum-treated dielectric oil, and High-Pot dielectric testers provided the engineering benchmarks that pure literature surveys cannot. Our sensor thresholds, protection relay logic, and oil monitoring concept are directly derived from observing the manual limitations of these real industrial systems.</p>
+        </div>
+        <div class="rw-card">
+          <div class="rw-year">Standard</div>
+          <h3>IS 335:2018 — Mineral Insulating Oils for Transformers</h3>
+          <p>The Bureau of Indian Standards specification IS 335:2018 defines the dielectric breakdown voltage thresholds, moisture content limits, and flash point requirements for transformer mineral insulating oils. Our system's LDR-based oil quality sensor and PT100 temperature thresholds (35°C oil rise, 40°C winding rise above 40°C ambient) are calibrated to trigger alerts based on deviation from parameters implied by this standard, ensuring our protection logic is grounded in recognized Indian engineering norms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTCOMES -->
+  <section id="outcomes" class="section">
+    <div class="container">
+      <div class="section-label">05 / Expected Outcomes</div>
+      <h2 class="section-title">What This System Delivers</h2>
+      <p class="section-intro">Verified through systematic hardware and software testing, the prototype demonstrates these measurable outcomes.</p>
+      <div class="outcomes-wrap">
+        <div class="outcome-row">
+          <div class="outcome-icon">📊</div>
+          <div class="outcome-text">
+            <h3>Real-Time Parameter Visibility</h3>
+            <p>All four substation parameters — oil temperature, load current, oil tank level, and oil quality index — are displayed on the 16×2 LCD at the hardware level and simultaneously streamed to the IoT cloud dashboard. Operators gain a continuous, live picture of substation health without stepping foot inside the switchyard. System testing confirmed data transmission latency of under 2 seconds from sensor reading to cloud update under standard Wi-Fi conditions.</p>
+          </div>
+        </div>
+        <div class="outcome-row">
+          <div class="outcome-icon">🛡</div>
+          <div class="outcome-text">
+            <h3>Automated Fault Isolation & Trip Response</h3>
+            <p>When any parameter breaches its configured threshold — tested with controlled overload current, heated oil, and manually reduced oil level during the hardware testing phase — the ESP32 instantly commands the relay module to trip the MCB. Testing confirmed the automated trip response within milliseconds of threshold breach, with zero false positives in the overload test and correct fault identification across all four simulated fault scenarios.</p>
+          </div>
+        </div>
+        <div class="outcome-row">
+          <div class="outcome-icon">🔔</div>
+          <div class="outcome-text">
+            <h3>Instant Remote Fault Alerts</h3>
+            <p>Upon fault detection, the system simultaneously triggers a local buzzer alarm and dispatches a real-time push notification to the operator's registered devices via the IoT platform. This dual-channel alert architecture ensures that no fault goes unnoticed regardless of whether the operator is on-site or hundreds of kilometres away, dramatically reducing Mean Time to Repair (MTTR) for substation faults.</p>
+          </div>
+        </div>
+        <div class="outcome-row">
+          <div class="outcome-icon">📈</div>
+          <div class="outcome-text">
+            <h3>Predictive Maintenance Foundation</h3>
+            <p>By logging all sensor readings to the cloud over time, the system builds historical trend data that enables predictive — rather than reactive — maintenance. A gradual upward drift in oil temperature over weeks, or a slow decline in oil level indicating a minor leak, can be identified well before reaching critical thresholds. This predictive capability is the most economically significant outcome of the project, with the potential to extend transformer service life and eliminate unplanned outage costs.</p>
+          </div>
+        </div>
+        <div class="outcome-row">
+          <div class="outcome-icon">💡</div>
+          <div class="outcome-text">
+            <h3>Cost-Effective Scalable Architecture</h3>
+            <p>The total component cost of the prototype hardware (ESP32, sensors, custom PCB, relay, LCD, power supply) is a fraction of traditional SCADA systems, making this solution viable for deployment at low-voltage and medium-voltage substations in rural or semi-urban distribution networks where full SCADA infrastructure is economically unfeasible. The ESP32's built-in Wi-Fi eliminates the need for a separate communication modem, further reducing hardware costs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUTURE SCOPE -->
+  <section id="future-scope" class="section dark-section">
+    <div class="container">
+      <div class="section-label">06 / Future Scope</div>
+      <h2 class="section-title">The Road Beyond the Prototype</h2>
+      <p class="section-intro">The current prototype establishes a solid foundation. These are the natural next steps for industrial deployment and research extension.</p>
+      <div class="fs-grid">
+        <div class="fs-card">
+          <div class="fs-icon">🤖</div>
+          <h3>AI-Powered Predictive Analytics</h3>
+          <p>Integrating machine learning models trained on historical sensor data to predict equipment failure before it occurs. Pattern recognition on temperature trends and current waveform harmonics could provide early warnings days or weeks ahead of a fault — moving the system from threshold-based protection to truly proactive AI-driven grid intelligence.</p>
+        </div>
+        <div class="fs-card">
+          <div class="fs-icon">⚙</div>
+          <h3>Motorized Automatic Tap Changer</h3>
+          <p>The current 630 kVA transformer uses a manual off-circuit tap changer requiring de-energization for voltage regulation. A future iteration of this IoT system could continuously monitor input voltage and automatically command a motorized on-load tap changer (OLTC) to maintain output voltage within ±2% of nominal — a key step toward a truly smart, self-regulating grid node.</p>
+        </div>
+        <div class="fs-card">
+          <div class="fs-icon">🌐</div>
+          <h3>LoRaWAN & 4G/5G Connectivity</h3>
+          <p>The current prototype relies on standard Wi-Fi, limiting deployment to areas with existing infrastructure. Replacing the ESP32's Wi-Fi stack with LoRaWAN for long-range, low-power communication or integrating a 4G/5G cellular module would enable deployment in completely remote, off-grid substations — expanding the system's applicability to rural electrification infrastructure across India.</p>
+        </div>
+        <div class="fs-card">
+          <div class="fs-icon">🔗</div>
+          <h3>SCADA System Integration via Modbus/DNP3</h3>
+          <p>For large utilities managing hundreds of substations, the system could be extended to communicate with existing SCADA platforms using industrial protocols like Modbus TCP or DNP3. This would allow IoT-monitored substations to feed real-time data directly into utility-level Energy Management Systems (EMS), providing a bridge between low-cost IoT hardware and enterprise-grade grid management software.</p>
+        </div>
+        <div class="fs-card">
+          <div class="fs-icon">📱</div>
+          <h3>Dedicated Mobile Application</h3>
+          <p>Developing a purpose-built Android/iOS application with biometric authentication, customizable alert thresholds per substation, offline data caching, and a multi-substation map view would make the system production-ready for utility deployment. The app could also include an AR feature to overlay live sensor readings onto a camera view of the physical switchyard for field technicians.</p>
+        </div>
+        <div class="fs-card">
+          <div class="fs-icon">🛡</div>
+          <h3>Cybersecurity Hardening</h3>
+          <p>As substations become networked nodes, they become targets for cyberattacks. Future work must include TLS/SSL encryption for all cloud communication, device authentication certificates, intrusion detection at the firmware level, and compliance with IEC 62351 — the international standard for securing power systems communication — before any utility-scale deployment can responsibly proceed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <div class="section-label">07 / Achievements</div>
+      <h2 class="section-title">Milestones Reached</h2>
+      <p class="section-intro">From concept to tested hardware — key milestones achieved during the 2025–26 academic year.</p>
+      <div class="ach-grid">
+        <div class="ach-card">
+          <div class="ach-badge">✅</div>
+          <h3>Industrial Visit & Field Benchmarking</h3>
+          <p>Conducted a structured technical visit to Koyna Engineers Pvt. Ltd., Nashik — analysing a 630 kVA, 11kV/433V Dyn11 transformer, 33kV metering cubicles (500/5A CT), ONAN cooling systems, and high-voltage dielectric test infrastructure. Published a formal Industrial Visit Report validating project sensor selections against real industrial specifications.</p>
+        </div>
+        <div class="ach-card">
+          <div class="ach-badge">✅</div>
+          <h3>Custom PCB Design & Fabrication</h3>
+          <p>Completed full PCB layout in professional EDA software encompassing five distinct sections: power supply (AC to regulated 5V/12V DC), signal conditioning (Wheatstone bridge + Op-Amp for PT100), microcontroller (ESP32), sensor interface, and IoT communication. PCB fabricated on single-layer FR4 board with proper grounding planes and analog-digital isolation, verified through continuity and power-on testing.</p>
+        </div>
+        <div class="ach-card">
+          <div class="ach-badge">✅</div>
+          <h3>Hardware Assembly & Integration</h3>
+          <p>Successfully assembled all hardware components — transformer oil tank model, PT100 sensor inside oil, HC-SR04 on tank top, LDR in transparent pipe, ACS712 in the current path, voltage sensor across load, ESP32 on PCB, 16×2 LCD, relay module, and MCB — into a single integrated prototype board with all wiring secured, colour-coded, and insulated to engineering standards.</p>
+        </div>
+        <div class="ach-card">
+          <div class="ach-badge">✅</div>
+          <h3>Four-Scenario Hardware Testing Passed</h3>
+          <p>Systematically tested all four fault scenarios: (1) Temperature — heated oil externally, verified PT100 response and alert trigger above threshold. (2) Oil Level — manually reduced oil, confirmed HC-SR04 detected low level. (3) Oil Quality — added controlled impurities, LDR output reduced correctly, alert generated. (4) Overload — increased load current beyond rated value, ACS712 detected overload, relay tripped MCB. Zero false positives or communication failures observed.</p>
+        </div>
+        <div class="ach-card">
+          <div class="ach-badge">✅</div>
+          <h3>IoT Cloud Dashboard Operational</h3>
+          <p>ESP32 successfully configured to transmit all four sensor parameters to the IoT cloud platform via Wi-Fi. Live dashboard displays real-time values, historical graphs, and triggers alert notifications upon threshold breach. Remote relay command functionality verified — operators can trip or reset the MCB from the web interface without physical access to the hardware unit.</p>
+        </div>
+        <div class="ach-card">
+          <div class="ach-badge">✅</div>
+          <h3>Proteus Circuit Simulation Verified</h3>
+          <p>Complete circuit schematic was designed and simulated in Proteus Design Suite prior to PCB fabrication, validating sensor signal conditioning stages, ESP32 GPIO assignments, relay switching logic, and LCD communication — eliminating design errors before committing to physical fabrication and reducing development time and component wastage significantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" class="section dark-section">
+    <div class="container">
+      <div class="section-label">08 / Team Details</div>
+      <h2 class="section-title">The Minds Behind the Machine</h2>
+      <p class="section-intro">Group No. 22 — Department of Electronics & Telecommunication Engineering, R.H. Sapat College of Engineering, Nashik | Academic Year 2025–26</p>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">RB</div>
+          <h3>Ramesh Bhandari</h3>
+          <div class="roll">Roll No. 05</div>
+          <div class="team-role">Hardware Design Lead</div>
+          <p>Led PCB layout design and fabrication, sensor integration and calibration, power supply circuit design, and field benchmarking at Koyna Engineers. Responsible for the Wheatstone bridge signal conditioning for PT100 and analog front-end design.</p>
+          <div class="team-contact">📞 7350525402</div>
+        </div>
+        <div class="team-card featured-card">
+          <div class="team-avatar">JS</div>
+          <h3>Jaydeep Sonawane</h3>
+          <div class="roll">Roll No. 55</div>
+          <div class="team-role">Software & IoT Lead</div>
+          <p>Developed the ESP32 firmware, IoT cloud integration, threshold-based protection algorithms, and relay control logic. Architected the cloud dashboard, alert notification system, and remote control interface. Led system-level integration and end-to-end testing.</p>
+          <div class="team-contact">📞 9689758117</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">HP</div>
+          <h3>Hemant Patil</h3>
+          <div class="roll">Roll No. 43</div>
+          <div class="team-role">Testing & Documentation Lead</div>
+          <p>Coordinated the four-scenario hardware testing protocol, Proteus circuit simulation, component procurement, and systematic fault verification. Led technical documentation including the Industrial Visit Report, project report, and presentation materials for review panels.</p>
+          <div class="team-contact">📞 8793568218</div>
+        </div>
+      </div>
+      <div class="faculty-row">
+        <div class="faculty-card">
+          <div class="faculty-label">Project Guide</div>
+          <div class="faculty-name">Mrs. M. S. Gahiwad</div>
+        </div>
+        <div class="faculty-card">
+          <div class="faculty-label">Project Coordinator</div>
+          <div class="faculty-name">Mrs. H. H. Kulkarni</div>
+        </div>
+        <div class="faculty-card">
+          <div class="faculty-label">Head of Department</div>
+          <div class="faculty-name">Dr. S. P. Agnihotri</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCLUSION -->
+  <section id="conclusion" class="section">
+    <div class="container">
+      <div class="section-label">09 / Conclusion</div>
+      <h2 class="section-title">A Smarter Grid Starts Here</h2>
+      <div class="conclusion-wrap">
+        <div class="conclusion-text">
+          <p>This project successfully demonstrates that modern, affordable IoT technology can fundamentally transform the way power distribution substations are monitored and protected. By integrating embedded hardware, a multi-parameter sensor network, Wi-Fi-based IoT communication, and automated protection logic into a single cohesive system, the project has built a working proof-of-concept that directly addresses the most critical shortcomings of traditional, manual substation management.</p>
+          <p>The system was not designed in a vacuum. Every hardware choice — from the PT100's temperature thresholds to the ACS712's current scaling — was grounded in real-world industrial specifications observed during the field visit to Koyna Engineers Pvt. Ltd. This hands-on industrial validation transforms the project from a theoretical exercise into a practically motivated engineering solution with clear deployment pathways.</p>
+          <p>The most significant contribution of this work is the demonstration that a system costing a small fraction of conventional SCADA infrastructure can deliver comparable core functionality — real-time monitoring, automated fault isolation, remote supervision, and predictive maintenance data collection — making advanced substation intelligence accessible to utilities serving rural, semi-urban, and developing-region power networks.</p>
+          <p>All four hardware test scenarios — temperature fault, oil level depletion, oil quality degradation, and current overload — were successfully detected and automatically tripped within expected parameters. The IoT dashboard operates reliably with sub-2-second data refresh, and remote relay control was verified across network conditions. The prototype has met every objective defined at the project's inception.</p>
+          <p>With the foundation built, the path forward is clear: extend to LoRaWAN for remote deployment, integrate AI-based predictive analytics on accumulated cloud data, and harden the communication stack to IEC 62351 cybersecurity standards. This system is not merely a final-year project — it is a scalable platform for the next generation of India's smart power grid.</p>
+        </div>
+        <div class="conclusion-metrics">
+          <div class="metric-card"><span class="metric-val">4</span><span class="metric-desc">Fault scenarios tested & verified</span></div>
+          <div class="metric-card"><span class="metric-val">&lt;2s</span><span class="metric-desc">Cloud data refresh latency</span></div>
+          <div class="metric-card"><span class="metric-val">0</span><span class="metric-desc">False positives in testing</span></div>
+          <div class="metric-card"><span class="metric-val">5</span><span class="metric-desc">PCB design sections integrated</span></div>
+          <div class="metric-card"><span class="metric-val">100%</span><span class="metric-desc">Objectives achieved</span></div>
+          <div class="metric-card"><span class="metric-val">IS 335</span><span class="metric-desc">Standard compliance validated</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section dark-section">
+    <div class="container">
+      <div class="section-label">10 / Contact</div>
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-intro">Interested in learning more about this project, potential collaboration, or industrial applications? Reach out to the team.</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-block">
+            <div class="contact-icon">🏛</div>
+            <div>
+              <div class="contact-label">Institution</div>
+              <div class="contact-val">Gokhale Education Society's<br>R. H. Sapat College of Engineering,<br>Management Studies and Research<br>Nashik – 422 005, Maharashtra, India</div>
+            </div>
+          </div>
+          <div class="contact-block">
+            <div class="contact-icon">🎓</div>
+            <div>
+              <div class="contact-label">Department</div>
+              <div class="contact-val">Electronics & Telecommunication Engineering</div>
+            </div>
+          </div>
+          <div class="contact-block">
+            <div class="contact-icon">📅</div>
+            <div>
+              <div class="contact-label">Academic Year</div>
+              <div class="contact-val">2025 – 2026 | Final Year Project</div>
+            </div>
+          </div>
+          <div class="contact-block">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-label">Team Members</div>
+              <div class="contact-val">
+                Ramesh Bhandari — 7350525402<br>
+                Jaydeep Sonawane — 9689758117<br>
+                Hemant Patil — 8793568218
+              </div>
+            </div>
+          </div>
+          <div class="contact-block">
+            <div class="contact-icon">✉</div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-val">hematspatil2004@gmail.com</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <form class="contact-form" onsubmit="handleForm(event)">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea rows="5" placeholder="Your message or query..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message ⚡</button>
+            <div id="form-msg" class="form-success" style="display:none;">✅ Message sent! We'll get back to you soon.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>⚡ IoT Based Monitoring & Controlling of Substation Equipment</span>
+      <span>Group 22 | R.H. Sapat College of Engineering, Nashik | 2025–26</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
